@@ -191,37 +191,37 @@ $(document).ready(function(){
     		}
     		
     		// 비밀번호 확인 값과 변경할 비밀번호 값이 일치하지 않을때
-    		if($("#myPage_user_password").val() != $("#Account_New_Password").val()){
+    		if($("#user_password").val() != $("#Account_New_Password").val()){
     			alert("비밀번호가 다릅니다");
-    			$("#myPage_user_password").focus();
+    			$("#user_password").focus();
     			return false;
     		}
     		
     		// 비밀번호와 닉네임이 같을때
-    		if($("#myPage_user_password").val()==$("#nickname").val()){
+    		if($("#user_password").val()==$("#nickname").val()){
     			alert("비밀번호와 닉네임이 같습니다.");
-    			$("#myPage_user_password").focus();
+    			$("#user_password").focus();
     			return false;
     		}
     		
     		// 비밀번호 입력칸에 공백이 있을 경우
-    		if($("#myPage_user_password").val().search(/\s/) != -1){
+    		if($("#user_password").val().search(/\s/) != -1){
     			alert('비밀번호에 공백이 있습니다');
-    			$('myPage_user_password').focus();
+    			$('#user_password').focus();
     			return false;
     		}
     		
     		// 비밀번호가 숫자 or 영문 으로만 이루어져있을때
-    		if($("#myPage_user_password").val().search(/[0-9]/g)<0||$("#user_password").val().search(/[a-z]/ig)<0||$("#user_password").val().search(/[~!@#$%^&*()_+|<>?:{}]/)<0){
+    		if($("#user_password").val().search(/[0-9]/g)<0||$("#user_password").val().search(/[a-z]/ig)<0||$("#user_password").val().search(/[~!@#$%^&*()_+|<>?:{}]/)<0){
     			alert('비밀번호는 숫자, 영문, 특수문자를 혼합하여 작성해주세요')
-    			$('#myPage_user_password').focus();
+    			$('#user_password').focus();
     			return false;
     		}
     		
     		// 비밀번호 자릿수 설정
-    		if($("#myPage_user_password").val().length<7||$("#user_password").val().length>20){
+    		if($("#user_password").val().length<7||$("#user_password").val().length>20){
     			alert('비밀번호는 7자리 이상, 20자리 미만으로 작성해주세요');
-    			$("#myPage_user_password").focus();
+    			$("#user_password").focus();
     			return false;
     		}
     		
